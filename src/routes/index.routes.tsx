@@ -1,21 +1,21 @@
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { getBottomSpace } from "react-native-iphone-x-helper";
-
+import { Platform } from "react-native";
+import { HStack, Text, useTheme } from "native-base";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { getBottomSpace } from "react-native-iphone-x-helper";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { RootStackParamList } from "./rootStackParamList";
 import { TabStackParamList } from "./tabStackParamList";
+import { RootStackParamList } from "./rootStackParamList";
 
 import { Home } from "../screens/Home";
 import { Actors } from "../screens/Actors";
-import { ActorsDetails } from "../screens/ActorsDetails";
 import { Favorites } from "../screens/Favorites";
-import { EpisodeDetails } from "../screens/EpisodeDetails";
+import { ActorsDetails } from "../screens/ActorsDetails";
 import { SeasonDetails } from "../screens/SeasonDetails";
-import { Box, Center, HStack, Text, useTheme } from "native-base";
-import { Platform } from "react-native";
+import { SeriesDetails } from "../screens/SeriesDetails";
+import { EpisodeDetails } from "../screens/EpisodeDetails";
 
 const { Navigator, Screen, Group } =
   createNativeStackNavigator<RootStackParamList>();
@@ -177,6 +177,7 @@ const Routes = () => {
           <Screen name="Home" component={TabRoutes} />
           <Screen name="ActorsDetails" component={ActorsDetails} />
           <Screen name="EpisodeDetails" component={EpisodeDetails} />
+          <Screen name="SeriesDetails" component={SeriesDetails} />
           <Screen name="SeasonDetails" component={SeasonDetails} />
         </Group>
       </Navigator>

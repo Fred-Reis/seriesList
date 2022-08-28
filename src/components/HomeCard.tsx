@@ -1,9 +1,14 @@
 import { Animated, TouchableWithoutFeedback } from "react-native";
-import { Box, Center, Text, useTheme } from "native-base";
+
+import { memo } from "react";
+
 import { MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { Box, Center, Text, useTheme } from "native-base";
 
-type CardProps = {
+import { SeriesDetailsPropsDTO } from "../DTOs/seriesDetailsPropsDTO";
+
+type CardProps = SeriesDetailsPropsDTO & {
   id: number;
   image: string;
   title: string;
@@ -13,7 +18,7 @@ type CardProps = {
   scale: any;
 };
 
-export function HomeCard({
+const HomeCard = ({
   id,
   image,
   title,
@@ -21,17 +26,30 @@ export function HomeCard({
   last,
   scale,
   average,
-}: CardProps) {
+  poster,
+  summary,
+  schedule,
+  genres,
+}: CardProps) => {
   const { variables } = useTheme();
 
   const { navigate } = useNavigation();
 
+  function handleOpenSeriesDetails() {
+    const data: SeriesDetailsPropsDTO = {
+      id,
+      genres,
+      poster,
+      title,
+      schedule,
+      summary,
+    };
+
+    navigate("SeriesDetails", data);
+  }
+
   return (
-    <TouchableWithoutFeedback
-      onPress={() => {
-        navigate("SeasonDetails");
-      }}
-    >
+    <TouchableWithoutFeedback onPress={handleOpenSeriesDetails}>
       <Animated.View
         style={{
           width: variables.CARD_WIDTH,
@@ -77,4 +95,6 @@ export function HomeCard({
       </Animated.View>
     </TouchableWithoutFeedback>
   );
-}
+};
+
+export default memo(HomeCard);

@@ -3,7 +3,8 @@ import { TabStackParamList } from "./tabStackParamList";
 
 export type RootStackParamList = {
   Home: NavigatorScreenParams<TabStackParamList>;
-  SeasonDetails: undefined;
+  SeriesDetails: undefined;
   EpisodeDetails: undefined;
   ActorsDetails: undefined;
+  SeasonDetails: undefined;
 };

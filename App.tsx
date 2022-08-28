@@ -9,8 +9,7 @@ import {
 
 import { THEME } from "./src/styles/theme";
 import { Loading } from "./src/components/Loading";
-import { Home } from "./src/screens/Home";
-import { SeasonDetails } from "./src/screens/SeasonDetails";
+
 import Routes from "./src/routes/index.routes";
 
 export default function App() {
@@ -25,7 +24,6 @@ export default function App() {
       />
 
       {fontsLoaded === true ? <Routes /> : <Loading />}
-      {/* {fontsLoaded === true ? <SeasonDetails /> : <Loading />} */}
     </NativeBaseProvider>
   );
 }
