@@ -14,7 +14,7 @@ export const THEME = extendTheme({
       500: "#323841",
       400: "#2F353E",
     },
-    secondary: {
+    red: {
       500: "#F32135",
     },
     green: {
@@ -56,7 +56,7 @@ export const THEME = extendTheme({
 
     EMPTY_ITEM_SIZE: (width - CARD_WIDTH) / 2,
 
-    // BACKDROP_WIDTH: width,
-    // BACKDROP_HEIGHT: height * 0.6,
+    BACKDROP_WIDTH: width,
+    BACKDROP_HEIGHT: height * 0.65,
   },
 });
