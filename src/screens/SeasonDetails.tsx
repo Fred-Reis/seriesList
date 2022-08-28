@@ -9,8 +9,10 @@ import {
   useTheme,
   VStack,
 } from "native-base";
+import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 import RenderHtml from "react-native-render-html";
+import { Ionicons } from "@expo/vector-icons";
 
 import { SeasonDetailCard } from "../components/SeasonDetailCard";
 
@@ -177,8 +179,10 @@ const seriesList = [
   },
 ];
 
-export function SeasonDetail() {
+export function SeasonDetails() {
   const { variables, colors } = useTheme();
+
+  const { goBack } = useNavigation();
 
   const poster =
     "https://static.tvmaze.com/uploads/images/original_untouched/0/2400.jpg";
@@ -219,6 +223,16 @@ export function SeasonDetail() {
   return (
     <Box bg="primary.700" h="100%">
       <BackDrop />
+
+      <Ionicons
+        name="ios-arrow-back-circle-outline"
+        size={30}
+        color="white"
+        style={{ margin: 35, position: "absolute" }}
+        onPress={() => {
+          goBack();
+        }}
+      />
 
       <VStack mt="50%">
         <FlatList

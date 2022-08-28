@@ -10,8 +10,8 @@ import {
 import { THEME } from "./src/styles/theme";
 import { Loading } from "./src/components/Loading";
 import { Home } from "./src/screens/Home";
-import { SeasonDetail } from "./src/screens/SeasonDetail";
-// import { Routes } from "./src/routes";
+import { SeasonDetails } from "./src/screens/SeasonDetails";
+import Routes from "./src/routes/index.routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
@@ -24,8 +24,8 @@ export default function App() {
         translucent
       />
 
-      {/* {fontsLoaded === true ? <Routes /> : <Loading />} */}
-      {fontsLoaded === true ? <SeasonDetail /> : <Loading />}
+      {fontsLoaded === true ? <Routes /> : <Loading />}
+      {/* {fontsLoaded === true ? <SeasonDetails /> : <Loading />} */}
     </NativeBaseProvider>
   );
 }

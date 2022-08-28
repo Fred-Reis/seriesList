@@ -1,6 +1,7 @@
 import { Animated, TouchableWithoutFeedback } from "react-native";
 import { Box, Center, Text, useTheme } from "native-base";
 import { MaterialIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 type CardProps = {
   id: number;
@@ -23,10 +24,12 @@ export function HomeCard({
 }: CardProps) {
   const { variables } = useTheme();
 
+  const { navigate } = useNavigation();
+
   return (
     <TouchableWithoutFeedback
       onPress={() => {
-        console.log("pressed", id);
+        navigate("SeasonDetails");
       }}
     >
       <Animated.View
@@ -57,7 +60,7 @@ export function HomeCard({
           <Animated.Image
             source={{ uri: image }}
             style={{
-              height: variables.CARD_HEIGHT,
+              height: variables.CARD_HEIGHT * 1.1,
               borderRadius: 30,
             }}
           />

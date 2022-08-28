@@ -1,5 +1,6 @@
 import { SafeAreaView, Platform } from "react-native";
 import { VStack, useTheme, HStack, Text } from "native-base";
+
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialIcons } from "@expo/vector-icons";
 
@@ -9,6 +10,7 @@ import { Input } from "../components/Input";
 
 export function Home() {
   const { variables, colors } = useTheme();
+
   const seriesList = [
     {
       id: 250,
@@ -496,7 +498,7 @@ export function Home() {
         </HStack>
 
         <LinearGradient
-          colors={[colors.primary[500], "transparent", colors.primary[700]]}
+          colors={[colors.primary[700], "transparent", colors.primary[700]]}
           style={{
             width: variables.width,
             height:
