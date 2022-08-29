@@ -46,8 +46,6 @@ export function EpisodeDetails() {
     poster,
   } = route.params as EpisodeProps;
 
-  console.log(route.params);
-
   const BackDrop = () => (
     <VStack
       position="absolute"

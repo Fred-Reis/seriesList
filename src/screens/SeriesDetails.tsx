@@ -31,8 +31,8 @@ export function SeriesDetails() {
   const { id, poster, genres, schedule, summary, title } =
     route.params as SeriesDetailsPropsDTO;
 
-  const handleGetSeries = async (id: string) => {
-    const response = await API.SERIES_SEASONS(id);
+  const handleGetSeries = async (_id: string) => {
+    const response = await API.SERIES_SEASONS(_id);
     setSeriesList(response.data);
   };
 

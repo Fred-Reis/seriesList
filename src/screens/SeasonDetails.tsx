@@ -37,8 +37,8 @@ export function SeasonDetails() {
     episodeOrder,
   } = route.params as SeasonPropsDTO;
 
-  const handleGetEpisodes = async (id: string) => {
-    const response = await API.SEASON_EPISODES(id);
+  const handleGetEpisodes = async (_id: string) => {
+    const response = await API.SEASON_EPISODES(_id);
     setEpisodesList(response.data);
   };
 

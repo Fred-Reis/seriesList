@@ -1,25 +1,52 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Animated } from "react-native";
-import { Center, Text, useTheme, Box, IBoxProps } from "native-base";
+import { useTheme, Box, IBoxProps } from "native-base";
 
 import HomeCard from "../components/HomeCard";
+import { Button } from "./Button";
 
 type ListProps = IBoxProps & {
   data: any[];
+  disabledReward: boolean;
+  handleGetSeries: (string) => void;
+  pageForward: () => void;
+  pageReward: () => void;
 };
 
-export function AnimatedList({ data, ...rest }: ListProps) {
+export function AnimatedList({
+  data,
+  disabledReward,
+  handleGetSeries,
+  pageForward,
+  pageReward,
+  ...rest
+}: ListProps) {
   const scrollX = useRef(new Animated.Value(0)).current;
 
-  const { variables } = useTheme();
+  const [index, setIndex] = useState<any>();
+
+  const { variables, colors } = useTheme();
+
+  const listRef = useRef(null);
+
+  const handleUpdateList = () => {
+    pageForward();
+    listRef.current.scrollToIndex({ index: 0 });
+  };
+
+  const _onViewableItemsChanged = useRef(({ viewableItems }) => {
+    setIndex(viewableItems[viewableItems.length - 1].index);
+  });
 
   return (
     <Box {...rest}>
       <Animated.FlatList
+        ref={listRef}
         onScroll={Animated.event(
           [{ nativeEvent: { contentOffset: { x: scrollX } } }],
           { useNativeDriver: true }
         )}
+        onViewableItemsChanged={_onViewableItemsChanged.current}
         showsHorizontalScrollIndicator={false}
         horizontal
         bounces={false}
@@ -30,6 +57,7 @@ export function AnimatedList({ data, ...rest }: ListProps) {
         initialNumToRender={8}
         maxToRenderPerBatch={10}
         scrollEventThrottle={16}
+        initialScrollIndex={0}
         renderItem={({ item, index }) => {
           const inputRange = [
             (index - 1) * variables.CARD_WIDTH,
@@ -58,6 +86,41 @@ export function AnimatedList({ data, ...rest }: ListProps) {
           );
         }}
       />
+
+      {index === 1 && !disabledReward && (
+        <Button
+          bg={disabledReward ? colors.gray[300] : colors.red[500]}
+          title="preview page"
+          w="150px"
+          alignSelf="flex-start"
+          mt={4}
+          ml={6}
+          disabled={disabledReward}
+          onPress={pageReward}
+        />
+      )}
+
+      {data.length - 1 === index && data.length > 1 && (
+        <Button
+          title="next page"
+          w="150px"
+          alignSelf="flex-end"
+          mt={10}
+          mr={6}
+          onPress={handleUpdateList}
+        />
+      )}
+
+      {data.length === 1 && (
+        <Button
+          title="get series list"
+          w="150px"
+          alignSelf="center"
+          mt={10}
+          mr={6}
+          onPress={() => handleGetSeries("1")}
+        />
+      )}
     </Box>
   );
 }
