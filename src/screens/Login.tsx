@@ -9,7 +9,9 @@ import { Button } from "../components/Button";
 
 import { useAuth } from "../hooks/useAuth";
 
-import logo from "../assets/logo.png";
+import LottieView from "lottie-react-native";
+
+import movie from "../assets/movie.json";
 
 export function Login() {
   const [, setIsBiometricSupported] = useState(false);
@@ -50,7 +52,14 @@ export function Login() {
       />
 
       <Center h="100%" w="100%">
-        <Image source={logo} w={150} h={150} alt="logo" />
+        <LottieView
+          source={movie}
+          loop
+          autoPlay
+          style={{ width: 230, height: 230, marginLeft: 15 }}
+          resizeMode="cover"
+          speed={1}
+        />
         <Text
           color="white"
           fontSize="2xl"
