@@ -13,11 +13,11 @@
 
   <img alt="language version" src="https://img.shields.io/badge/Node-v_12.13.1-339933?logo=node.js">
 
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Fred-Reis/birdie-test-frontend">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Fred-Reis/seriesList">
 
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Fred-Reis/birdie-test-frontend">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Fred-Reis/seriesList">
 
-  <img alt="GitHub repo size in bytes" src="https://img.shields.io/github/repo-size/Fred-Reis/birdie-test-frontend">
+  <img alt="GitHub repo size in bytes" src="https://img.shields.io/github/repo-size/Fred-Reis/seriesList">
 
 </div>
 
@@ -28,7 +28,7 @@
 <div align="center">
 
   <a href="#-about-this-project">About this project</a>&nbsp;&nbsp;
-  <a href="#-back-end-challenge">Front End challenge</a>&nbsp;&nbsp;
+  <a href="#-frontt-end-challenge">Front End challenge</a>&nbsp;&nbsp;
   <a href="#-deploy">Deploy</a>&nbsp;&nbsp;
   <a href="#-features">Features</a>&nbsp;&nbsp;
   <a href="#-demo">Demo</a>&nbsp;&nbsp;
@@ -176,7 +176,7 @@ cd <folder-name>
 3 - Let's cloning the repository
 
 ```bash
-git clone https://github.com/Fred-Reis/birdie-test-frontend
+git clone https://github.com/Fred-Reis/seriesList
 ```
 
 4 - Execute the following command to create `node_modules` folder
@@ -231,7 +231,7 @@ How about taking a look at the
 
 <br/>
 
-# 👨🏻‍🏫 Autor
+# 👨🏻‍🏫 Author
 
 <h3 align="center">
 Author: <a alt="Fred-Reis" href="https://github.com/Fred-Reis">Frederico Reis</a>
