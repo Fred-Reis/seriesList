@@ -54,7 +54,7 @@ export function Login() {
       />
 
       <Center h="100%" w="100%">
-
+      
         <LottieView
           source={movie}
           loop
