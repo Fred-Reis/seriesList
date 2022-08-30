@@ -27,17 +27,17 @@
 
 <div align="center">
 
-  <a href="##-about-this-project">About this project</a>&nbsp;&nbsp;
-  <a href="##-back-end-challenge">Front End challenge</a>&nbsp;&nbsp;
-  <a href="##-deploy">Deploy</a>&nbsp;&nbsp;
-  <a href="##-features">Features</a>&nbsp;&nbsp;
-  <a href="##-demo">Demo</a>&nbsp;&nbsp;
-  <a href="##-random-user">Random User</a>&nbsp;&nbsp;
-  <a href="##-tests">Tests</a>&nbsp;&nbsp;
-  <a href="##-technologies-and-libraries">Technologies and Libraries</a>&nbsp;&nbsp;
-  <a href="##-roadmap">Roadmap</a>&nbsp;&nbsp;
-  <a href="##-running-the-project">Running the project</a>&nbsp;&nbsp;
-  <a href="#-author-frederico-reis">Author</a>
+  <a href="#-about-this-project">About this project</a>&nbsp;&nbsp;
+  <a href="#-back-end-challenge">Front End challenge</a>&nbsp;&nbsp;
+  <a href="#-deploy">Deploy</a>&nbsp;&nbsp;
+  <a href="#-features">Features</a>&nbsp;&nbsp;
+  <a href="#-demo">Demo</a>&nbsp;&nbsp;
+  <a href="#-random-user">Random User</a>&nbsp;&nbsp;
+  <a href="#-tests">Tests</a>&nbsp;&nbsp;
+  <a href="#-technologies-and-libraries">Technologies and Libraries</a>&nbsp;&nbsp;
+  <a href="#-roadmap">Roadmap</a>&nbsp;&nbsp;
+  <a href="#-running-the-project">Running the project</a>&nbsp;&nbsp;
+  <a href="#-author">Author</a>
 
 </div>
 
