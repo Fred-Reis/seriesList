@@ -1,5 +1,5 @@
-<div align="center" style="margin-bottom:10px">
-  <img alt="Care Recipient logo"
+<div align="center" style="margin-bottom:10px; width:250px; margin:auto" >
+  <img alt="challenge-logo"
     src="src/assets/logo.png"
   />
 
