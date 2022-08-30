@@ -6,6 +6,8 @@ import { ActorPropsDTO } from "../screens/ActorsDetails";
 export declare global {
   namespace ReactNavigation {
     interface RootParamList {
+      Splash: undefined;
+      Login: any;
       Home: undefined;
       SeriesDetails: SeriesDetailsPropsDTO;
       Favorite: undefined;

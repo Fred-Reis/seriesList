@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { Platform } from "react-native";
 
+import { VStack, useTheme, Text, Center, Image } from "native-base";
 import * as LocalAuthentication from "expo-local-authentication";
-import { VStack, useTheme, Text, Center } from "native-base";
 import { LinearGradient } from "expo-linear-gradient";
 
 import { Button } from "../components/Button";
 
 import { useAuth } from "../hooks/useAuth";
+
+import logo from "../assets/logo.png";
 
 export function Login() {
   const [, setIsBiometricSupported] = useState(false);
@@ -21,7 +23,7 @@ export function Login() {
       promptMessage: "Authenticate",
       fallbackLabel: "Enter Password",
     });
-    auth.then((result) => {
+    auth.then(() => {
       signIn();
     });
   };
@@ -48,6 +50,7 @@ export function Login() {
       />
 
       <Center h="100%" w="100%">
+        <Image source={logo} w={150} h={150} alt="logo" />
         <Text
           color="white"
           fontSize="2xl"

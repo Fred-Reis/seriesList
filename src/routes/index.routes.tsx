@@ -21,6 +21,7 @@ import { Login } from "../screens/Login";
 import { Home } from "../screens/Home";
 
 import { useAuth } from "../hooks/useAuth";
+import { Splash } from "../screens/Splash";
 
 const { Navigator, Screen, Group } =
   createNativeStackNavigator<RootStackParamList>();
@@ -189,7 +190,10 @@ const Routes = () => {
             <Screen name="SeasonDetails" component={SeasonDetails} />
           </Group>
         ) : (
-          <Screen name="Login" component={Login} />
+          <Group>
+            {/* <Screen name="Splash" component={Splash} /> */}
+            <Screen name="Login" component={Login} />
+          </Group>
         )}
       </Navigator>
     </NavigationContainer>
