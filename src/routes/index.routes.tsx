@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { Platform } from "react-native";
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -189,9 +188,7 @@ const Routes = () => {
             <Screen name="SeasonDetails" component={SeasonDetails} />
           </Group>
         ) : (
-          <Group>
-            <Screen name="Login" component={Login} />
-          </Group>
+          <Screen name="Login" component={Login} />
         )}
       </Navigator>
     </NavigationContainer>

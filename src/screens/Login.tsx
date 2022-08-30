@@ -25,8 +25,10 @@ export function Login() {
       promptMessage: "Authenticate",
       fallbackLabel: "Enter Password",
     });
-    auth.then(() => {
+    auth.then((res) => {
+      if(res.success){
       signIn();
+      }
     });
   };
 
@@ -52,6 +54,7 @@ export function Login() {
       />
 
       <Center h="100%" w="100%">
+      
         <LottieView
           source={movie}
           loop
@@ -60,6 +63,7 @@ export function Login() {
           resizeMode="cover"
           speed={1}
         />
+
         <Text
           color="white"
           fontSize="2xl"
