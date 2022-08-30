@@ -15,7 +15,7 @@ type CardProps = SeasonPropsDTO & {
   episode?: any;
 };
 
-function SeasonDetailCard({
+const SeasonDetailCard = ({
   image,
   title,
   index,
@@ -28,7 +28,7 @@ function SeasonDetailCard({
   endDate,
   episodeOrder,
   episode,
-}: CardProps) {
+}: CardProps) => {
   const { variables } = useTheme();
 
   const { navigate } = useNavigation();
@@ -90,6 +90,6 @@ function SeasonDetailCard({
       </Box>
     </TouchableWithoutFeedback>
   );
-}
+};
 
 export default memo(SeasonDetailCard);

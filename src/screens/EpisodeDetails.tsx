@@ -1,7 +1,5 @@
 import {
   Box,
-  Center,
-  FlatList,
   HStack,
   Image,
   ScrollView,
@@ -9,10 +7,11 @@ import {
   useTheme,
   VStack,
 } from "native-base";
-import { Ionicons } from "@expo/vector-icons";
-import RenderHtml from "react-native-render-html";
 import { LinearGradient } from "expo-linear-gradient";
-import { useNavigation, useRoute } from "@react-navigation/native";
+import { useRoute } from "@react-navigation/native";
+import RenderHtml from "react-native-render-html";
+
+import { BackButton } from "../components/BackButton";
 
 type EpisodeProps = {
   image: {
@@ -32,7 +31,6 @@ export function EpisodeDetails() {
   const { variables, colors } = useTheme();
 
   const route = useRoute();
-  const { goBack } = useNavigation();
 
   const {
     name,
@@ -90,15 +88,7 @@ export function EpisodeDetails() {
         bottom={0}
       />
 
-      <Ionicons
-        name="ios-arrow-back-circle-outline"
-        size={30}
-        color="white"
-        style={{ margin: 35, position: "absolute" }}
-        onPress={() => {
-          goBack();
-        }}
-      />
+      <BackButton />
 
       <VStack p={6} mt="120%">
         <VStack px={4}>

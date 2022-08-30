@@ -1,6 +1,8 @@
 import { SeriesDetailsPropsDTO } from "../DTOs/seriesDetailsPropsDTO";
 import { SeasonPropsDTO } from "../DTOs/seasonPropsDTO";
 
+import { ActorPropsDTO } from "../screens/ActorsDetails";
+
 export declare global {
   namespace ReactNavigation {
     interface RootParamList {
@@ -9,7 +11,7 @@ export declare global {
       Favorite: undefined;
       EpisodeDetails: undefined;
       Actors: undefined;
-      ActorsDetails: undefined;
+      ActorsDetails: ActorPropsDTO;
       SeasonDetails: SeasonPropsDTO;
     }
   }

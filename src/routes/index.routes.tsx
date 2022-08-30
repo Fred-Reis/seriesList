@@ -1,21 +1,21 @@
 import { Platform } from "react-native";
-import { HStack, Text, useTheme } from "native-base";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { getBottomSpace } from "react-native-iphone-x-helper";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from "@react-navigation/native";
+import { getBottomSpace } from "react-native-iphone-x-helper";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { HStack, Text, useTheme } from "native-base";
 
-import { TabStackParamList } from "./tabStackParamList";
 import { RootStackParamList } from "./rootStackParamList";
+import { TabStackParamList } from "./tabStackParamList";
 
-import { Home } from "../screens/Home";
-import { Actors } from "../screens/Actors";
-import { Favorites } from "../screens/Favorites";
+import { EpisodeDetails } from "../screens/EpisodeDetails";
+import { SeriesDetails } from "../screens/SeriesDetails";
 import { ActorsDetails } from "../screens/ActorsDetails";
 import { SeasonDetails } from "../screens/SeasonDetails";
-import { SeriesDetails } from "../screens/SeriesDetails";
-import { EpisodeDetails } from "../screens/EpisodeDetails";
+import { Favorites } from "../screens/Favorites";
+import { Actors } from "../screens/Actors";
+import { Home } from "../screens/Home";
 
 const { Navigator, Screen, Group } =
   createNativeStackNavigator<RootStackParamList>();
@@ -65,7 +65,7 @@ const TabRoutes = () => {
                 justifyContent="space-evenly"
               >
                 <MaterialCommunityIcons
-                  name="star"
+                  name="heart"
                   size={30}
                   color={colors.gray[100]}
                 />
@@ -80,7 +80,7 @@ const TabRoutes = () => {
               </HStack>
             ) : (
               <MaterialCommunityIcons
-                name="star"
+                name="heart"
                 size={35}
                 color={colors.gray[300]}
               />

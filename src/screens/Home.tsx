@@ -75,7 +75,6 @@ export function Home() {
   };
 
   useEffect(() => {
-    setLoading(true);
     handleGetSeries();
   }, []);
 
@@ -104,6 +103,8 @@ export function Home() {
               placeholder="Search"
               onChangeText={setSeriesName}
               value={seriesName}
+              onSubmitEditing={handleGetSeriesByName}
+              autoCorrect={false}
             />
           </HStack>
 

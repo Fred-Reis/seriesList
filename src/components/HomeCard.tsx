@@ -2,9 +2,9 @@ import { Animated, TouchableWithoutFeedback } from "react-native";
 
 import { memo } from "react";
 
-import { MaterialIcons } from "@expo/vector-icons";
-import { useNavigation } from "@react-navigation/native";
 import { Box, Center, Text, useTheme } from "native-base";
+import { useNavigation } from "@react-navigation/native";
+import { MaterialIcons } from "@expo/vector-icons";
 
 import { SeriesDetailsPropsDTO } from "../DTOs/seriesDetailsPropsDTO";
 
