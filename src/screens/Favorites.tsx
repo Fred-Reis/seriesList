@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { SafeAreaView, Platform } from "react-native";
+import { SafeAreaView, Platform, TouchableOpacity } from "react-native";
 
+import { VStack, useTheme, Text, FlatList, Center, HStack } from "native-base";
 import { useAsyncStorage } from "@react-native-async-storage/async-storage";
-import { VStack, useTheme, Text, FlatList, Center } from "native-base";
-import { LinearGradient } from "expo-linear-gradient";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useIsFocused } from "@react-navigation/native";
+import { LinearGradient } from "expo-linear-gradient";
 
 import SeriesByActorCard from "../components/SeriesByActorCard";
 import { Loading } from "../components/Loading";
@@ -12,9 +13,7 @@ import { Loading } from "../components/Loading";
 import NotFound from "../assets/not-found.svg";
 
 export function Favorites() {
-  const [favoritesList, setFavoritesList] = useState<any[] | undefined>(
-    undefined
-  );
+  const [favoritesList, setFavoritesList] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
 
   const { variables, colors } = useTheme();
@@ -39,6 +38,12 @@ export function Favorites() {
       JSON.stringify(favoritesList.filter((favorite) => favorite.id !== _id))
     );
     setLoading(false);
+  };
+
+  const alphabetOrderList = () => {
+    setFavoritesList((prevState) => [
+      ...prevState.sort((a, b) => a.title.localeCompare(b.title)),
+    ]);
   };
 
   useEffect(() => {
@@ -77,6 +82,25 @@ export function Favorites() {
               Favorites List
             </Text>
 
+            <HStack mx={8} mb="80px" mt={4}>
+              <TouchableOpacity
+                onPress={alphabetOrderList}
+                style={{
+                  alignItems: "center",
+                  flexDirection: "row",
+                }}
+              >
+                <MaterialCommunityIcons
+                  name="order-alphabetical-ascending"
+                  size={30}
+                  color={colors.gray[100]}
+                />
+                <Text color="white" fontSize="lg" fontFamily="heading" ml={4}>
+                  Sort alphabetically
+                </Text>
+              </TouchableOpacity>
+            </HStack>
+
             <FlatList
               bounces={false}
               data={favoritesList}
@@ -90,7 +114,6 @@ export function Favorites() {
               maxToRenderPerBatch={10}
               contentContainerStyle={{
                 paddingBottom: 70,
-                alignItems: "center",
               }}
               renderItem={({ item, index }) => {
                 return (

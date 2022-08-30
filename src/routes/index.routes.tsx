@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { Platform } from "react-native";
+
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
@@ -15,7 +17,10 @@ import { ActorsDetails } from "../screens/ActorsDetails";
 import { SeasonDetails } from "../screens/SeasonDetails";
 import { Favorites } from "../screens/Favorites";
 import { Actors } from "../screens/Actors";
+import { Login } from "../screens/Login";
 import { Home } from "../screens/Home";
+
+import { useAuth } from "../hooks/useAuth";
 
 const { Navigator, Screen, Group } =
   createNativeStackNavigator<RootStackParamList>();
@@ -170,16 +175,22 @@ const TabRoutes = () => {
 };
 
 const Routes = () => {
+  const { token } = useAuth();
+
   return (
     <NavigationContainer>
       <Navigator screenOptions={{ headerShown: false }}>
-        <Group>
-          <Screen name="Home" component={TabRoutes} />
-          <Screen name="ActorsDetails" component={ActorsDetails} />
-          <Screen name="EpisodeDetails" component={EpisodeDetails} />
-          <Screen name="SeriesDetails" component={SeriesDetails} />
-          <Screen name="SeasonDetails" component={SeasonDetails} />
-        </Group>
+        {token ? (
+          <Group>
+            <Screen name="Home" component={TabRoutes} />
+            <Screen name="ActorsDetails" component={ActorsDetails} />
+            <Screen name="EpisodeDetails" component={EpisodeDetails} />
+            <Screen name="SeriesDetails" component={SeriesDetails} />
+            <Screen name="SeasonDetails" component={SeasonDetails} />
+          </Group>
+        ) : (
+          <Screen name="Login" component={Login} />
+        )}
       </Navigator>
     </NavigationContainer>
   );

@@ -7,4 +7,5 @@ export type RootStackParamList = {
   EpisodeDetails: undefined;
   ActorsDetails: undefined;
   SeasonDetails: undefined;
+  Login: undefined;
 };

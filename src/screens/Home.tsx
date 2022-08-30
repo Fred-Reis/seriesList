@@ -8,7 +8,10 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { AnimatedList } from "../components/AnimatedList";
 
 import { Loading } from "../components/Loading";
+import { Button } from "../components/Button";
 import { Input } from "../components/Input";
+
+import { useAuth } from "../hooks/useAuth";
 
 import { API } from "../api";
 
@@ -19,6 +22,8 @@ export function Home() {
   const [page, setPage] = useState(1);
 
   const { variables, colors } = useTheme();
+
+  const { signOut } = useAuth();
 
   const handleGetSeries = async (_page: string = "1") => {
     setLoading(true);
@@ -137,6 +142,14 @@ export function Home() {
             pageForward={handleForwardPage}
             pageReward={handleRewardPage}
             disabledReward={page === 1}
+          />
+
+          <Button
+            mt={6}
+            alignSelf="center"
+            title="Logout"
+            w="50%"
+            onPress={() => signOut()}
           />
         </SafeAreaView>
       )}

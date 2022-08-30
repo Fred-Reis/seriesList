@@ -53,7 +53,7 @@ const HomeCard = ({
       <Animated.View
         style={{
           width: variables.CARD_WIDTH,
-          marginLeft: index === 0 ? (variables.CARD_WIDTH * 0.5) / 2 : 0,
+          marginLeft: index === 0 ? (variables.CARD_WIDTH * 0.6) / 2 : 0,
           marginRight: last ? (variables.CARD_WIDTH * 0.7) / 2 : 0,
           transform: [{ scaleY: scale }],
         }}

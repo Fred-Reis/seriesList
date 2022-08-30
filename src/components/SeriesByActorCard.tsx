@@ -54,6 +54,17 @@ const SeriesByActorCard = ({
         mr={last ? (variables.CARD_WIDTH * 0.8) / 2 : 0}
       >
         <Box position="relative" overflowY="hidden" marginX={variables.SPACING}>
+          {isFavorite && (
+            <Button
+              onPress={() => {
+                removeFavoriteFromList(id);
+              }}
+              title="Remove"
+              h={12}
+              mb={8}
+              mx={2}
+            />
+          )}
           <Image
             alt={title}
             source={{ uri: image }}
@@ -70,17 +81,6 @@ const SeriesByActorCard = ({
           >
             {title}
           </Text>
-          {isFavorite && (
-            <Button
-              onPress={() => {
-                removeFavoriteFromList(id);
-              }}
-              title="Remove"
-              h={12}
-              mt={2}
-              mx={2}
-            />
-          )}
         </Box>
       </Box>
     </TouchableWithoutFeedback>
