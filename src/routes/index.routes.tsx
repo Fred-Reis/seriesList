@@ -191,7 +191,7 @@ const Routes = () => {
           </Group>
         ) : (
           <Group>
-            {/* <Screen name="Splash" component={Splash} /> */}
+            <Screen name="Splash" component={Splash} />
             <Screen name="Login" component={Login} />
           </Group>
         )}
