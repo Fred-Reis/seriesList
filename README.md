@@ -181,6 +181,8 @@ $ npx react-native run-<your-preferred-platform>
 
 <hr/>
 
+<br/>
+
 <h3 align="center">
 Author: <a alt="Fred-Reis" href="https://github.com/Fred-Reis">Frederico Reis</a>
 </h3>
