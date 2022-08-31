@@ -120,7 +120,7 @@ Some of technologies and libraries used at this project:
 
 ## 🗺 Roadmap
 
-[ ] Replace `Async Storage` to [**Firebase**](https://firebase.google.com/products/firestore?gclsrc=ds&gclsrc=ds) => To improve the security and allow users to create an account and authenticate themselves on the app and store the date on a cloud Database;
+[ ] Replace `Async Storage` to [**Firebase**](https://firebase.google.com/products/firestore?gclsrc=ds&gclsrc=ds) => To improve the security and allow users to create an account and authenticate themselves on the app and store the date on a cloud Database; 
 [ ] Create tests using [**Jest**](https://jestjs.io/)  
 [ ] Improve performance  
 [ ] Integrate the app with [**Bitrise**](https://www.bitrise.io/) => For CI/CD purposes;  
