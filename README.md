@@ -33,7 +33,6 @@
   <a href="#-technologies-and-libraries">Technologies and Libraries</a>&nbsp;&nbsp;
   <a href="#-roadmap">Roadmap</a>&nbsp;&nbsp;
   <a href="#-running-the-project">Running the project</a>&nbsp;&nbsp;
-  <a href="#-author">Author</a>
 
 </div>
 
@@ -179,8 +178,6 @@ $ npx react-native run-<your-preferred-platform>
 </h4>
 
 <br/>
-
-# 👨🏻‍🏫 Author
 
 <h3 align="center">
 Author: <a alt="Fred-Reis" href="https://github.com/Fred-Reis">Frederico Reis</a>
