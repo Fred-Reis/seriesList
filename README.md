@@ -99,7 +99,7 @@ as:
 ## 👀 Demo
 
 <h1 align="center">
-  <img src="src/assets/dashboard.gif"/>
+  <img src="src/assets/demo.gif"/>
 </h1>
 
 <br/>
