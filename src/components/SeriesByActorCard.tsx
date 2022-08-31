@@ -77,7 +77,7 @@ const SeriesByActorCard = ({
             fontSize={isFavorite ? "xl" : "md"}
             color="white"
             fontFamily="body"
-            mt={isFavorite && 4}
+            mt={isFavorite ? 4 : 0}
           >
             {title}
           </Text>
