@@ -194,4 +194,4 @@ Author: <a alt="Fred-Reis" href="https://github.com/Fred-Reis">Frederico Reis</a
 
 </p>
 
-Made with ♥️ 2022
+<p align="center">Made with ♥️ 2022</p>
