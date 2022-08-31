@@ -60,6 +60,9 @@ export function AnimatedList({
         decelerationRate={0.5}
         snapToInterval={variables.CARD_WIDTH}
         initialScrollIndex={0}
+        initialNumToRender={8}
+        maxToRenderPerBatch={10}
+        scrollEventThrottle={16}
         renderItem={({ item, index }) => {
           const inputRange = [
             (index - 1) * variables.CARD_WIDTH,
