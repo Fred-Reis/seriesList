@@ -10,7 +10,7 @@
 
 <div align="center">
 
-  <img alt="language version" src="https://img.shields.io/badge/React-v_0.69.5-61dafb?logo=react">
+  <img alt="language version" src="https://img.shields.io/badge/React Native-v_0.69.5-61dafb?logo=react">
 
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Fred-Reis/seriesList">
 
