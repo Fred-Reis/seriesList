@@ -51,7 +51,6 @@ The proposal for this project was create a small mobile app to allow users listi
 This project was built using [**React Native**](https://reactnative.dev/) and [**typescript**](https://www.typescriptlang.org/)
 
 - [Link for the API](https://www.tvmaze.com/api)
-
 - [Download the Android app clicking here and test yourself](https://github.com/Fred-Reis/seriesList/raw/main/android/app/build/outputs/apk/release/app-release.apk)
 
 <br/>
@@ -64,18 +63,18 @@ This project was built using [**React Native**](https://reactnative.dev/) and [*
 series.
 - After clicking on a series, the application should show the details of the series, showing
 the following information:
--- Name
--- Poster
--- Days and time during which the series airs
--- Genres
--- Summary
--- List of episodes separated by season
+  - Name
+  - Poster
+  - Days and time during which the series airs
+  - Genres
+  - Summary
+  - List of episodes separated by season
 - After clicking on an episode, the application should show the episode’s information, including:
--- Name
--- Number
--- Season
--- Summary
--- Image, if there is one
+  - Name
+  - Number
+  - Season
+  - Summary
+  - Image, if there is one
 
 <br/>
 
