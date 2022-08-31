@@ -29,13 +29,18 @@ export function AnimatedList({
 
   const listRef = useRef(null);
 
+  const asyncPagination = async () => {
+    await pageForward();
+  };
+
   const handleUpdateList = () => {
-    pageForward();
-    listRef.current.scrollToIndex({ index: 0 });
+    asyncPagination().then((res) =>
+      listRef.current.scrollToIndex({ index: 0 })
+    );
   };
 
   const _onViewableItemsChanged = useRef(({ viewableItems }) => {
-    setIndex(viewableItems[viewableItems.length - 1].index);
+    setIndex(viewableItems[viewableItems?.length - 1]?.index);
   });
 
   return (
@@ -54,9 +59,6 @@ export function AnimatedList({
         keyExtractor={(item) => String(item.id)}
         decelerationRate={0.5}
         snapToInterval={variables.CARD_WIDTH}
-        initialNumToRender={8}
-        maxToRenderPerBatch={10}
-        scrollEventThrottle={16}
         initialScrollIndex={0}
         renderItem={({ item, index }) => {
           const inputRange = [
