@@ -38,10 +38,6 @@
 
 <br/>
 
-<h1 align="center">
-  <img src="src/assets/screenshot.png"/>
-</h1>
-
 # 💡 About this project
 
 This project was build as a technical test.
