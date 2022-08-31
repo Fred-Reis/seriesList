@@ -52,6 +52,8 @@ This project was built using [**React Native**](https://reactnative.dev/) and [*
 - [Link for the API](https://www.tvmaze.com/api)
 - [Download the Android app clicking here and test yourself](https://github.com/Fred-Reis/seriesList/raw/main/android/app/build/outputs/apk/release/app-release.apk)
 
+> Heads up - If the link above doesn't work you find the apk into this path `android/app/build/outputs/apk/release/app-release.apk`
+
 <br/>
 
 # 🔥 Mandatory Features
