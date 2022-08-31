@@ -1,12 +1,11 @@
-<div align="center" style="margin-bottom:10px; width:250px; margin:auto" >
-  <img alt="challenge-logo"
+<div align="center" style="margin-bottom:10px; margin:auto" >
+  <img style="margin-bottom:10px; width:150px; height:150px alt="challenge-logo"
     src="src/assets/logo.png"
   />
-
 </div>
 
 <h2 align="center" style="margin:50px">
-   Care Recipient desktop Dashboard
+   Series List mobile app
 </h2>
 
 <div align="center">
@@ -47,48 +46,56 @@
   <img src="src/assets/screenshot.png"/>
 </h1>
 
-## 💡 About this project
+# 💡 About this project
 
 This project was build as a technical test.
-The proposal for this project was create a small web application to allow next of kins to look observations of older adults receiving care, called care recipients.
-This project was built using [**ReactJS**](https://reactjs.org/) and [**typescript**](https://www.typescriptlang.org/)
+The proposal for this project was create a small mobile app to allow users listing TV series, using the API provided by the [TVMaze website](https://www.tvmaze.com). 
 
-- [Back-End Repository](https://github.com/Fred-Reis/birdie-test-backend)
+This project was built using [**React Native**](https://reactnative.dev/) and [**typescript**](https://www.typescriptlang.org/)
 
-- [Try Online Application](https://dazzling-neumann-0c94b8.netlify.app/)
+- [Link for the API](https://www.tvmaze.com/api)
 
-<br/>
-
-## 🖥 Front End Challenge
-
-The challenge was Display the information to a family member of this care recipient
-This could mean presenting it in the following forms:
-
-- A table
-- A graph
-- A timeline
+- [Download the Android app clicking here and test yourself](https://github.com/Fred-Reis/seriesList/raw/main/android/app/build/outputs/apk/release/app-release.apk)
 
 <br/>
 
-## 🌐 Deploy
+# 🔥 Mandatory Features
 
-This Front end project is hosted at [Netlify](https://www.netlify.com/)  
-which URL [https://dazzling-neumann-0c94b8.netlify.app/](https://dazzling-neumann-0c94b8.netlify.app/)
+- List all of the series contained in the API used by the paging scheme provided by the API.
+- Allow users to search series by name
+- The listing and search views must show at least the name and poster image of the
+series.
+- After clicking on a series, the application should show the details of the series, showing
+the following information:
+-- Name
+-- Poster
+-- Days and time during which the series airs
+-- Genres
+-- Summary
+-- List of episodes separated by season
+- After clicking on an episode, the application should show the episode’s information, including:
+-- Name
+-- Number
+-- Season
+-- Summary
+-- Image, if there is one
 
 <br/>
 
-## 🔥 Features
+# 🎄 Bonus Features
 
-It's a simple Dashboard to show some valuable infos to nexts of kin from those care recipients, at first moment it was developed exclusive to be used at desktop screens. This project highlighted those infos by:
-
-- Doughnut Chart => It shows all events amount by their types.
-- Table list => It's a scroll list of all events showing their dates, type and caregiver (it's the person which did that care). Beyond shows you may access more details about the event clicking on each one. This table allow these following type of filters:
-  - Sort by date recents / olders.
-  - Filter by event type / caregiver id
-- Timeline Graph => It's a Line bar to shows the events amount evolution day by day.
-- Its was created two cards to show important infos as `most recurrent event type` and `alerts triggered` by recipient
-  at that period.
-- And was also created a profile info to show simple infos from care recipient
+- ✅ Allow the user to set a PIN number to secure the application and prevent unauthorized users.
+- ✅ For supported phones, the user must be able to choose if they want to enable fingerprint authentication to avoid typing the PIN number while opening the app.
+- ✅ Allow the user to save a series as a favorite.
+- ✅ Allow the user to delete a series from the favorites list.
+- ✅ Allow the user to browse their favorite series in alphabetical order, and click on one to
+see its details.
+- ✅ Create a people search by listing the name and image of the person.
+- ✅ After clicking on a person, the application should show the details of that person, such
+as:
+-- Name
+-- Image
+-- Series they have participated in, with a link to the series details.
 
 > heads up: these events are shown 100 by 100 events, to navigate between these pages, please use the top left buttons
 
@@ -104,46 +111,18 @@ It's a simple Dashboard to show some valuable infos to nexts of kin from those c
   <img src="src/assets/dashboard.gif"/>
 </h1>
 
-## 🃏 Random User
-
-At each reload on the app will be generated a new random user (just when reload whole app, doesn't between pagination). To generate this user was used this [Random user generator](https://randomuser.me/).
-
-<h1 align="center">
-  <img src="src/assets/usergenerate.gif"/>
-</h1>
-
-<br/>
-
-## 🧪 Tests
-
-Unit tests were implemented using [Jest](https://jestjs.io/)
-
-To run these tests just executing the following command at project root:
-
-```bash
-yarn test
-```
-
-Details will be displayed at your console.
-
-It's also possible to run the test with `--coverage` flag, It'll be generated a folder called `coverage` at the root of your project, into it there will be a folder called `Lcov-report`, looking for a file `index.html` open in your browser and get access further details of executed tests.
-
-```bash
-yarn test --coverage
-```
-
 <br/>
 
 ## 🛠 Technologies and Libraries
 
 Some of technologies and libraries used at this project:
 
+- [**Expo**](https://expo.dev/) ;
 - [**typescript**](https://www.typescriptlang.org/);
-- [**zustand**](https://github.com/pmndrs/zustand) => To manage the global state for data;
-- [**axios**](https://axios-http.com/docs/intro);
-- [**Styled Components**](https://styled-components.com/);
-- [**React Content Loader**](https://github.com/danilowoz/react-content-loader) => To create Skeleton svg to be shown when reloading;
-- [**react chartjs 2**](https://github.com/reactchartjs/react-chartjs-2);
+- [**NativeBase**](https://nativebase.io/) => NativeBase is a component library to build universal design systems;
+- [**Lottie**](https://github.com/lottie-react-native/lottie-react-native) => For the animations;
+- [**Async Storage**](https://react-native-async-storage.github.io/async-storage/) => Data storage system for React Native.;
+- [**expo-local-authentication**](https://docs.expo.dev/versions/latest/sdk/local-authentication) => To allow user to use FaceID and TouchID (iOS) or the Biometric Prompt (Android) to authenticate the user with a face or fingerprint scan.;
 
 <br/>
 
@@ -151,11 +130,10 @@ Some of technologies and libraries used at this project:
 
 ## 🗺 Roadmap
 
-[ ] Allow search by `care_recipient_id`  
-[ ] Improvements at responsivities from charts an  
-[ ] Mobile layout  
-[ ] Allow pagination by month  
-[ ] Filter by date
+[ ] Replace `Async Storage` to [**Firebase**](https://firebase.google.com/products/firestore?gclsrc=ds&gclsrc=ds) => To improve the security and allow users to create an account and authenticate themselves on the app and store the date on a cloud Database;
+[ ] Create tests using [**Jest**](https://jestjs.io/)  
+[ ] Improve performance  
+[ ] Integrate the app with [**Bitrise**](https://www.bitrise.io/) => For CI/CD purposes;  
 
 <br/>
 
@@ -185,41 +163,22 @@ git clone https://github.com/Fred-Reis/seriesList
 yarn
 ```
 
-5 - To start the application at development mode run the following command:
+5 - To install dependencies in IOS project using cocoa pods
 
 ```bash
-yarn start
+$ cd ios
+
+$ pod install
+```
+
+6 - Now, if you want to run this project on the emulator or device in development mode, run this command using your preferred platform.
+
+```bash
+$ npx react-native run-<your-preferred-platform>
 ```
 
 <br/>
 
-If you came right here it signs that everything has gone well 🙏🏼 and then you may already able to see the dashboard on your browser 😱 following the URL below:
-
-`http://localhost:3000`
-
-<br/>
-
-<!-- <h4 align="center">
-  🚧  Project README  🚀  under construction...  🚧
-</h4>
-
-<br/>
-
-<h4 align="center">
-How about taking a look at the
-  <a href="https://github.com/Fred-Reis/birdie-test-backend">
-   back end API project
-  </a>
-  for this application meanwhile 😉
-</h4>
-
-<br/>
-
-<h4 align="center">
-  Thanks for your patience!!🙏🏼
-</h4> -->
-
-<br/>
 
 <h4 align="center">
 😃  <strong>BE HAPPY!</strong>
@@ -246,4 +205,4 @@ Author: <a alt="Fred-Reis" href="https://github.com/Fred-Reis">Frederico Reis</a
 
 </p>
 
-Made with ♥️ 2021
+Made with ♥️ 2022
