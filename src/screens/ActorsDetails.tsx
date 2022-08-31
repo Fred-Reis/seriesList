@@ -147,11 +147,11 @@ export function ActorsDetails() {
               keyExtractor={(item) => String(item.id)}
               decelerationRate={1}
               snapToInterval={variables.CARD_WIDTH * 0.8}
-              scrollEventThrottle={16}
               showsHorizontalScrollIndicator={false}
-              horizontal
               initialNumToRender={8}
               maxToRenderPerBatch={10}
+              scrollEventThrottle={16}
+              horizontal
               renderItem={({ item, index }) => {
                 return (
                   <SeriesByActorCard
