@@ -93,12 +93,6 @@ as:
 -- Image
 -- Series they have participated in, with a link to the series details.
 
-> heads up: these events are shown 100 by 100 events, to navigate between these pages, please use the top left buttons
-
-<h1 align="center">
-  <img src="src/assets/buttons.png"/>
-</h1>
-
 <br/>
 
 ## 👀 Demo
