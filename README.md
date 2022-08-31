@@ -27,12 +27,9 @@
 <div align="center">
 
   <a href="#-about-this-project">About this project</a>&nbsp;&nbsp;
-  <a href="#-frontt-end-challenge">Front End challenge</a>&nbsp;&nbsp;
-  <a href="#-deploy">Deploy</a>&nbsp;&nbsp;
-  <a href="#-features">Features</a>&nbsp;&nbsp;
+  <a href="#-mandatory-features">Mandatory Features</a>&nbsp;&nbsp;
+  <a href="#-bonus-features">Bonus Features</a>&nbsp;&nbsp;
   <a href="#-demo">Demo</a>&nbsp;&nbsp;
-  <a href="#-random-user">Random User</a>&nbsp;&nbsp;
-  <a href="#-tests">Tests</a>&nbsp;&nbsp;
   <a href="#-technologies-and-libraries">Technologies and Libraries</a>&nbsp;&nbsp;
   <a href="#-roadmap">Roadmap</a>&nbsp;&nbsp;
   <a href="#-running-the-project">Running the project</a>&nbsp;&nbsp;
